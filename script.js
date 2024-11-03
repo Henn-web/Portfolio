@@ -74,3 +74,72 @@ ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { ori
 
 
 
+//contact section, send mail
+document.addEventListener('DOMContentLoaded', () => {
+    // Ambil nilai sebelumnya dari localStorage dan isi ke dalam input
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedMobileNumber = localStorage.getItem('userMobileNumber');
+
+    if (storedEmail) {
+        document.querySelector('input[placeholder="Email Address"]').value = storedEmail;
+    }
+
+    if (storedMobileNumber) {
+        document.querySelector('input[placeholder="Mobile Number"]').value = storedMobileNumber;
+    }
+});
+
+document.querySelector('#contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Ambil data dari form
+    const fullName = document.querySelector('input[placeholder="Full Name"]').value;
+    const email = document.querySelector('input[placeholder="Email Address"]').value;
+    const mobileNumber = document.querySelector('input[placeholder="Mobile Number"]').value;
+    const message = document.querySelector('textarea').value;
+
+    // Simpan email dan nomor telepon ke localStorage
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userMobileNumber', mobileNumber);
+
+    // Kirim data menggunakan AJAX
+    fetch('sendEmail.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+            fullName: fullName,
+            email: email,
+            mobileNumber: mobileNumber,
+            message: message,
+        }),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            const successMessage = document.getElementById('successMessage');
+            if (data.success) {
+                // Tampilkan pesan berhasil
+                successMessage.style.display = 'block';
+                successMessage.classList.add('success-message');
+                document.getElementById('contactForm').reset(); // Reset form after submission
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal!',
+                    text: 'Pesan gagal dikirim.',
+                    confirmButtonColor: '#00e7f9',
+                });
+            }
+        })
+        .catch(() => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'Terjadi kesalahan dalam pengiriman.',
+                confirmButtonColor: '#00e7f9',
+            });
+        });
+});
+
+
