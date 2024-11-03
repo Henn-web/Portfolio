@@ -26,6 +26,7 @@
     --shadow-color: rgba(0, 0, 0, .7);
 }
 
+
 *::selection {
     background: var(--main-color);
     color: var(--bg-color);
@@ -634,6 +635,39 @@ span {
     margin-top: 2rem;
     cursor: pointer;
 }
+
+/* Pesan Berhasil */
+.success-message {
+    display: none; /* Awalnya disembunyikan */
+    padding: 10px;
+    background-color: #00e7f9;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease, fadeOut 0.5s ease 2.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 
 .footer {
     display: flex;
