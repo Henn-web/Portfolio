@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -177,13 +179,13 @@
                     <a href="Toefl.pdf" target="_blank" class="text-primary">Lihat</a>
                 </div>
                 <div class="testimonial-slide swiper-slide">
-				<img src="ISSC p.jpg">
-                    <p>ISSC Informatics Olympiad. July 16, 2024</p>
-                    <a href="ISSC p.pdf" target="_blank" class="text-primary">Lihat</a>
+				<img src="ISSC.jpg">
+                    <pISSC Informatics Olympiad. July 16, 2024</p>
+                    <a href="ISSC.pdf" target="_blank" class="text-primary">Lihat</a>
                 </div>
                 <div class="testimonial-slide swiper-slide">
 				<img src="Webinar.jpg">
-                    <p>International Webinar SejutaCita Future Leaders Chapter: Japan 2024. 30 September 2024</p>
+                    <p>International Webinar SejutaCita Future Leaders Chapter: 8 Japan 2024. 30 September 2024</p>
                     <a href="Webinar.pdf" target="_blank" class="text-primary">Lihat</a>
                 </div>
                 <div class="testimonial-slide swiper-slide">
@@ -213,24 +215,27 @@
     </div>
 </div>
 
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form id="contactForm">
+        <div class="input-box">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-box">
+            <input type="number" placeholder="Mobile Number" required>
+        </div>
+        <textarea cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
+        <div class="success-message" id="successMessage" style="display: none;">Pesan berhasil dikirim!</div>
+    </form>
+</section>
 
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
+
 
     <footer class="footer">
         <div class="footer-text">
