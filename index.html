@@ -35,15 +35,19 @@
         <div class="home-content">
             <h3>Hello, I am</h3>
             <h1>Tan Henry Arianto</h1>
-            <p>
-                I'm a web developer who loves to create whatever I want
-            </p>
+            <!-- Typewriter Effect Start -->
+           <h2 class="typewrite text-8xl font-bold text-gray-800" data-type='["Informatics Student", "Web Developer", "Junior Programmer"]' data-period="2000">
+			<span class="wrap"></span>
+			</h2>
+			<span class="wrap border-r-2 border-black animate-blink"></span>
+
+            <!-- Typewriter Effect End -->
             <p>Currently I am a Class 12 student at SMKS Dinamika Pembangunan 1 Jakarta</p>
 
             <div class="social-media">
                 <a href="https://www.facebook.com/kevinperfect.kevinperfect?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/tneve39?igsh=MWw3aGRuNnlrdmlzaQ=="><i class='bx bxl-instagram-alt'></i></a>
-				 <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/henn.zz?igsh=MWxxcGswbnpyZHR6dw=="><i class='bx bxl-instagram-alt'></i></a>
+				 <a href="https://www.linkedin.com/in/tan-henry-arianto-b40587319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://wa.me/6285173156455"><i class='bx bxl-whatsapp'></i></a>
             </div>
 
@@ -102,34 +106,33 @@
                 Enjoy reading my blog post, if you have input or
                 any suggestions, please let me know. I'd like to hear your opinion.
             </p>
-            <a href="#" class="btn">Read More</a>
+            <a href="about-details.html" class="btn">Read More</a>
         </div>
     </section>
 
-    <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Web Development</h3>
-                <p>I am an experienced web developer with a focus on creating creative and effective solutions.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxs-paint'></i>
-                <h3>Graphic Design</h3>
-                <p>I am a creative and dedicated graphic designer with a focus on conveying strong visual messages. With a background in a variety of projects, I have developed a portfolio that reflects my expertise in designing compelling brand identities and stunning marketing materials.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bx-bar-chart-alt'></i>
-                <h3>Digital Marketing</h3>
-                <p>I am a passionate digital marketing enthusiast, currently deepening my understanding in this dynamic world. With a commitment to continuous learning, I have taken steps to dive into various aspects of digital marketing and integrate new knowledge into my strategy.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+   <section class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>Specializing in creating modern, responsive websites and web applications using the latest technologies. From sleek portfolio sites to complex web applications, I deliver solutions that combine beautiful design with powerful functionality.</p>
+            <a href="services-details.html" class="btn">Read More</a>
         </div>
-    </section>
+        <div class="services-box">
+            <i class='bx bx-lock-alt'></i>
+            <h3>Cryptography Services</h3>
+            <p>Offering specialized cryptographic solutions including secure communication systems, encryption implementation, and blockchain technology integration. I help protect your digital assets with state-of-the-art cryptographic protocols and security measures.</p>
+            <a href="services-details.html" class="btn">Read More</a>
+        </div>
+        <div class="services-box">
+            <i class='bx bx-brain'></i>
+            <h3>AI Integration & Automation</h3>
+            <p>Implementing cutting-edge AI solutions to automate business processes and enhance decision-making. From machine learning models to intelligent chatbots, I help businesses leverage AI technology to stay ahead of the competition.</p>
+            <a href="services-details.html" class="btn">Read More</a>
+        </div>
+    </div>
+</section>
 
     <section class="project" id="project">
         <h2 class="heading">Latest <span>Projects</span></h2>
@@ -180,9 +183,9 @@
                     <a href="Toefl.pdf" target="_blank" class="text-primary">Lihat</a>
                 </div>
                 <div class="testimonial-slide swiper-slide">
-				<img src="ISSC p.jpg">
-                    <p></p>ISSC Informatics Olympiad. July 16, 2024</p>
-                    <a href="ISSC p.pdf" target="_blank" class="text-primary">Lihat</a>
+				<img src="ISSC.jpg">
+                    <p>ISSC Informatics Olympiad. July 16, 2024</p>
+                    <a href="ISSC.pdf" target="_blank" class="text-primary">Lihat</a>
                 </div>
                 <div class="testimonial-slide swiper-slide">
 				<img src="Webinar.jpg">
@@ -201,7 +204,7 @@
                 </div>
 				   <div class="testimonial-slide swiper-slide">
 				<img src="set_web.jpg">
-                    <p>Certificate Dicoding - Web Programming. January 07, 2024</p>
+                    <p>Certificate Dicoding - Web Programming. January 07, 2025</p>
                     <a href="set_web.pdf" target="_blank" class="text-primary">Lihat</a>
                 </div>
             </div>
@@ -227,22 +230,21 @@
 
     <form id="contactForm">
         <div class="input-box">
-            <input type="text" id="fullName" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
+            <input type="text" id="fullName" name="from_name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
         </div>
         <div class="input-box">
-            <input type="number" placeholder="Mobile Number" required>
+            <input type="number" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required>
         </div>
-        <textarea cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
         <input type="submit" value="Send Message" class="btn">
-        <div class="success-message" id="successMessage" style="display: none;">Pesan berhasil dikirim!</div>
+        <div class="success-message" id="successMessage" style="display: none;">
+            Pesan berhasil dikirim!
+        </div>
     </form>
 </section>
 
-
-
-
-
+<!-- Footer -->
     <footer class="footer">
         <div class="footer-text">
             <p>Made by  Henn. | All Rights Reserved.</p>
@@ -253,11 +255,15 @@
         </div>
     </footer>
 
-
+<!-- buat foto/gambar -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
+	
+<!-- penghubung emailjs (pengirim email) -->	
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	
+<!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 
