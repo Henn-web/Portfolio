@@ -1027,3 +1027,231 @@ span {
 img {
     border-radius: 20px;
 }
+
+
+
+/* About Details Page Styles */
+.about-details {
+    min-height: 100vh;
+    padding: 5rem 9% 2rem;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.profile-section {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-section img {
+    width: 300px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-section .title {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.details-section {
+    flex: 2;
+}
+
+.details-section h3 {
+    color: var(--main-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.details-section ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.details-section ul li {
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.details-section ul li:before {
+    content: "•";
+    color: var(--main-color);
+    position: absolute;
+    left: -1rem;
+}
+
+/* Services Details Page Styles */
+.services-details {
+    min-height: 100vh;
+    padding: 5rem 9% 2rem;
+}
+
+.service-detail-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-item {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    transition: .5s ease;
+}
+
+.service-item:hover {
+    box-shadow: 0 .1rem 1rem var(--shadow-color);
+    transform: scale(1.02);
+}
+
+.service-item i {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.service-item h3 {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.service-content h4 {
+    color: var(--main-color);
+    margin: 1rem 0 0.5rem;
+}
+
+.service-content ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.service-content ul li {
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.service-content ul li:before {
+    content: "→";
+    color: var(--main-color);
+    position: absolute;
+    left: -1rem;
+}
+
+.cta-section {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: var(--bg-color);
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+}
+
+.cta-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .service-detail-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 617px) {
+    .about-details,
+    .services-details {
+        padding: 5rem 5% 2rem;
+    }
+}
+
+/* Responsive untuk tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 58%;
+    }
+    
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .home .home-content {
+        max-width: 100%;
+    }
+    
+    .home-img img {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-img img {
+        width: 80%;
+    }
+}
+
+/* Responsive untuk mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    html {
+        font-size: 55%;
+    }
+    
+    .header {
+        padding: 2rem 5%;
+    }
+    
+    #menu-icon {
+        display: block;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 .1rem 1rem var(--shadow-color);
+    }
+    
+    .navbar a {
+        display: block;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+    
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+    
+    .home-content h3 {
+        font-size: 2.8rem;
+    }
+    
+    .home .home-content,
+    .about .about-content {
+        text-align: center;
+    }
+    
+    .services-container {
+        flex-direction: column;
+    }
+}
