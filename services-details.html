@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Henn</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">  <!-- Gunakan CSS global -->
+    <link rel="stylesheet" href="about.css">  <!-- CSS khusus halaman About -->
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">Henn.</a>
+     <div class="icons">
+    <div class="back-container">
+        <i class="bx bx-arrow-back" id="back-button"></i>
+        <span class="back-text"  id="back-text"> Back</span>
+    </div>
+    <div class="bx bx-moon" id="darkMode-icon"></div>
+    <div class="bx bx-menu" id="menu-icon"></div>
+</div>
+    </header>
+
+    <section class="services-details">
+        <h2 class="heading">My <span>Services</span></h2>
+        
+        <div class="service-detail-container">
+            <div class="service-item">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <div class="service-content">
+                    <h4>What I Offer:</h4>
+                    <ul>
+                        <li>Responsive Website Development</li>
+                        <li>Custom Web Applications</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Website Maintenance</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                    <h4>Technologies:</h4>
+                    <p>HTML5, CSS3, JavaScript, React, Tailwind, Github</p>
+                    <h4>Process:</h4>
+                    <p>1. Requirement Analysis<br>
+                       2. Design Planning<br>
+                       3. Development<br>
+                       4. Testing<br>
+                       5. Deployment & Maintenance</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <i class='bx bx-lock-alt'></i>
+                <h3>Cryptography Services</h3>
+                <div class="service-content">
+                    <h4>Security Solutions:</h4>
+                    <ul>
+                        <li>Data Encryption Implementation</li>
+                        <li>Secure Communication Systems</li>
+                        <li>Blockchain Integration</li>
+                        <li>Security Audits</li>
+                        <li>Cryptographic Protocols</li>
+                    </ul>
+                    <h4>Expertise:</h4>
+                    <p>Symmetric/Asymmetric Encryption, Hash Functions, Digital Signatures</p>
+                    <h4>Applications:</h4>
+                    <p>- Secure Data Storage<br>
+                       - Authentication Systems<br>
+                       - Secure File Transfer<br>
+                       - Digital Rights Management</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <i class='bx bx-brain'></i>
+                <h3>AI Integration & Automation</h3>
+                <div class="service-content">
+                    <h4>AI Solutions:</h4>
+                    <ul>
+                        <li>Chatbot Development</li>
+                        <li>Process Automation</li>
+                        <li>Data Analysis</li>
+                        <li>Machine Learning Integration</li>
+                        <li>AI-Powered Recommendations</li>
+                    </ul>
+                    <h4>Technologies:</h4>
+                    <p>Python, TensorFlow, Natural Language Processing</p>
+                    <h4>Benefits:</h4>
+                    <p>- Increased Efficiency<br>
+                       - Cost Reduction<br>
+                       - Better Decision Making<br>
+                       - Enhanced User Experience</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Ready to Start Your Project?</h3>
+            <p>Let's discuss how I can help you achieve your goals</p>
+            <a href="index.html#contact" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+<!-- FOOTER (Menggunakan style.css) -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Made by Henn. | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+	<script>
+        // Back button functionality
+        document.getElementById('back-button').addEventListener('click', function() {
+            window.history.back();
+        });
+		 document.getElementById('back-text').addEventListener('click', function() {
+            window.history.back();
+        });
+    </script>
+	<script>
+	// MODE GELAP/TERANG
+document.getElementById("darkMode-icon").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+});
+</script>
+</body>
+</html>

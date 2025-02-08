@@ -1,0 +1,189 @@
+/* PASTIKAN HEADER TETAP MUNCUL */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Pastikan Navbar Sejajar */
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a.active {
+    color: var(--primary-color);
+}
+
+/* ABOUT SECTION */
+.about-section {
+    max-width: 1000px;
+    margin: 120px auto 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-section .heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section .heading span {
+    color: var(--primary-color);
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.profile-section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.profile-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-section .title {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.details-section {
+    flex: 2;
+    padding: 20px;
+}
+
+.details-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.details-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+.details-section ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.details-section ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.details-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* TOMBOL CONTACT */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+}
+/* BACK BUTTON (DENGAN TEKS) */
+.back-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.back-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* TOMBOL CONTACT ME */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: #fff !important;  /* Pastikan warnanya putih dan kontras */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+}
+
+
+/* ICON MODE WARNA & BACK BUTTON */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#darkMode-icon,
+#menu-icon,
+#back-button {
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* POSISI BACK BUTTON DI KIRI */
+#back-button {
+    position: relative;
+    left: -10px;
+}
