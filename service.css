@@ -293,102 +293,52 @@ body {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-    .content-wrapper {
+    .services-details {
+        padding: 15px;
+    }
+
+    .services-details .heading {
+        font-size: 28px;
+    }
+
+    .service-detail-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .profile-section img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .details-section {
+    .service-item {
         width: 100%;
-        padding: 0;
-    }
-
-    .details-box {
-        padding: 10px;
-    }
-
-    .about-section .heading {
-        font-size: 28px;
-    }
-
-    .profile-section h3 {
-        font-size: 20px;
-    }
-
-    .details-box h3 {
-        font-size: 22px;
-    }
-
-    .details-box p,
-    .details-box ul li {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* HEADER */
-    .logo {
-        font-size: 20px;
-        margin-left: 10px; /* Geser ke kiri agar tidak terlalu jauh */
-    }
-
-    .navbar {
-        display: none; /* Sembunyikan navbar, bisa diganti dengan menu hamburger */
-    }
-
-    /* ABOUT SECTION */
-    .about-section {
-        margin: 100px auto 30px;
         padding: 15px;
     }
 
-    .about-section .heading {
-        font-size: 24px; /* Perkecil ukuran heading */
-    }
-
-    .profile-section img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .profile-section h3 {
-        font-size: 18px;
-    }
-
-    .details-section {
-        text-align: center; /* Pusatkan teks agar lebih mudah dibaca */
-    }
-
-    .details-section h3 {
+    .service-item h3 {
         font-size: 20px;
     }
 
-    .details-section ul li {
+    .service-content h4 {
         font-size: 16px;
     }
 
-    /* BACK BUTTON */
-    .back-button {
-        font-size: 16px;
-    }
-
-    /* FOOTER */
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem 5%;
-    }
-
-    .footer-text p {
+    .service-content ul li,
+    .service-content p {
         font-size: 14px;
     }
 
-    .footer-iconTop a {
-        padding: 0.6rem;
+    .cta-section {
+        padding: 15px;
+    }
+
+    .cta-section h3 {
+        font-size: 20px;
+    }
+
+    .cta-section p {
+        font-size: 16px;
+    }
+
+    .cta-section .btn {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }
+
