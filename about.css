@@ -355,64 +355,50 @@ body {
 }
 
 @media (max-width: 480px) {
-    /* HEADER */
+    /* LOGO DAN BACK BUTTON */
     .logo {
-        font-size: 20px;
-        margin-left: 10px; /* Geser ke kiri agar tidak terlalu jauh */
+        font-size: 22px;
+        margin-left: 15px;
     }
 
-    .navbar {
-        display: none; /* Sembunyikan navbar, bisa diganti dengan menu hamburger */
+    .back-button {
+        font-size: 16px;
+        padding: 8px 12px;
     }
 
-    /* ABOUT SECTION */
-    .about-section {
-        margin: 100px auto 30px;
-        padding: 15px;
-    }
-
-    .about-section .heading {
-        font-size: 24px; /* Perkecil ukuran heading */
-    }
-
+    /* PROFIL */
     .profile-section img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .profile-section h3 {
         font-size: 18px;
+        text-align: center;
     }
 
-    .details-section {
-        text-align: center; /* Pusatkan teks agar lebih mudah dibaca */
+    .profile-section p {
+        font-size: 14px;
+        text-align: center;
     }
 
-    .details-section h3 {
+    /* SKILLS & EXPERTISE */
+    .skills-section h2 {
         font-size: 20px;
     }
 
-    .details-section ul li {
-        font-size: 16px;
-    }
-
-    /* BACK BUTTON */
-    .back-button {
-        font-size: 16px;
-    }
-
-    /* FOOTER */
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem 5%;
-    }
-
-    .footer-text p {
+    .skills-section ul li {
         font-size: 14px;
     }
+	.skills-section ul li::before {
+    content: none;
+}
 
-    .footer-iconTop a {
-        padding: 0.6rem;
+
+    /* ICON PERBAIKAN */
+    .skills-section ul li i {
+        font-size: 18px;
+        margin-right: 5px;
+		
     }
 }
