@@ -293,6 +293,19 @@ body {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+    /* LOGO DAN BACK BUTTON */
+    .logo {
+        font-size: 22px;
+        margin-left: 15px;
+    }
+    
+    .back-button {
+        top: 5px;
+        left: 5px;
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+    
     .services-details {
         padding: 15px;
     }
