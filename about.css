@@ -1,4 +1,19 @@
-/* PASTIKAN HEADER TETAP MUNCUL */
+/* STYLE GLOBAL */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --primary-color: #007BFF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
 .header {
     position: fixed;
     top: 0;
@@ -7,12 +22,25 @@
     padding: 15px 20px;
     background: var(--bg-color);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     z-index: 1000;
 }
 
-/* Pastikan Navbar Sejajar */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 75px; /* Geser logo ke kiri */
+}
+
+/* Saat Mode Dark Aktif */
+.dark-mode .logo {
+    color: cyan; /* Warna berubah jadi cyan saat dark mode */
+}
+
+/* NAVBAR */
 .navbar {
     display: flex;
     gap: 15px;
@@ -21,7 +49,8 @@
 .navbar a {
     color: var(--text-color);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .navbar a.active {
@@ -37,7 +66,7 @@
 }
 
 .about-section .heading {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -46,124 +75,179 @@
     color: var(--primary-color);
 }
 
+/* KONTEN UTAMA */
 .content-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
+/* PROFIL SECTION */
+
+/* Box Profil */
 .profile-section {
-    flex: 1;
-    text-align: center;
+	margin-top: 21px;
+    background-color: inherit; /* Mengikuti warna tema */
     padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #003366; /* Light Mode: Biru Gelap */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode: Border jadi cyan */
+.dark-mode .profile-section {
+    border-color: cyan;
+}
+
+/* Hover efek untuk menonjolkan */
+.profile-section:hover {
+    box-shadow: 0 0 15px rgba(0, 51, 102, 0.5); /* Light: Blue Glow */
+}
+
+.dark-mode .profile-section:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Dark: Cyan Glow */
 }
 
 .profile-section img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     border: 4px solid var(--primary-color);
     margin-bottom: 15px;
 }
 
 .profile-section h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 .profile-section .title {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: bold;
 }
 
+/* DETAIL SEBELAH KANAN */
 .details-section {
     flex: 2;
     padding: 20px;
 }
 
-.details-section h3 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 10px;
+/* KOTAK UNTUK SETIAP BAGIAN (Background, Skills, dll.) */
+.details-box {
+    background: var(--secondary-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
-.details-section ul {
+.details-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.details-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.details-box:hover::before {
+    opacity: 1;
+}
+
+/* Dark Mode - Box mengikuti warna background */
+.dark-mode .details-section div {
+    background-color: inherit; /* Mengikuti warna background utama */
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover tetap terlihat */
+.dark-mode .details-section div:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.details-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.details-box p,
+.details-box ul {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.details-box ul {
     list-style: none;
     padding-left: 0;
-    margin: 10px 0;
+    margin: 0;
 }
 
-.details-section ul li {
-    font-size: 16px;
+.details-box ul li {
+    font-size: 18px;
     margin-bottom: 5px;
-    position: relative;
-    padding-left: 20px;
+    padding-left: 0; /* Hilangkan padding tambahan */
+    display: flex;
+    align-items: center; /* Pastikan ikon dan teks sejajar */
+    gap: 10px; /* Beri jarak antara ikon dan teks */
 }
 
-.details-section ul li::before {
-    content: "✔";
+.details-box ul li i {
+    font-size: 22px;
+    color: var(--primary-color);
+    flex-shrink: 0; /* Pastikan ikon tidak berubah ukuran */
+    width: 25px; /* Pastikan ukuran ikon tetap */
+    text-align: center; /* Pusatkan ikon */
+}
+
+
+
+.details-box ul li::before {
+    content: "";
     position: absolute;
     left: 0;
     color: var(--primary-color);
     font-weight: bold;
 }
 
-.details-section p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-/* TOMBOL CONTACT */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 15px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #388e3c;
-}
-/* BACK BUTTON (DENGAN TEKS) */
-.back-container {
+/* BACK BUTTON */
+.back-button {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.back-text {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text-color);
-}
-
-/* TOMBOL CONTACT ME */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--primary-color);
-    color: #fff !important;  /* Pastikan warnanya putih dan kontras */
-    text-decoration: none;
+    gap: 5px; /* Jarak antara ikon dan teks */
     font-size: 18px;
     font-weight: bold;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: 0.3s;
+    color: var(--text-color);
+    text-decoration: none;
+    background: none; /* Tidak pakai background */
+    border: none; /* Hilangkan border */
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #388e3c;
+.back-button i {
+    font-size: 22px;
+}
+
+.back-button:hover {
+    color: var(--primary-color); /* Ubah warna saat hover */
 }
 
 
@@ -182,8 +266,153 @@
     color: var(--text-color);
 }
 
+/* Efek hover untuk masing-masing ikon */
+#darkMode-icon:hover,
+#menu-icon:hover,
+#back-button:hover {
+    color: var(--primary-color); /* Ubah warna saat hover */
+    transition: color 0.3s ease; /* Tambahkan efek transisi agar lebih halus */
+}
+
 /* POSISI BACK BUTTON DI KIRI */
 #back-button {
     position: relative;
     left: -10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 7%;
+    background: var(--main-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--white-color);
+    border-radius: .8rem;
+    border: .2rem solid var(--main-color);
+    outline: .2rem solid transparent;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    outline-color: var(--white-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: #333;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-section img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .details-section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .details-box {
+        padding: 10px;
+    }
+
+    .about-section .heading {
+        font-size: 28px;
+    }
+
+    .profile-section h3 {
+        font-size: 20px;
+    }
+
+    .details-box h3 {
+        font-size: 22px;
+    }
+
+    .details-box p,
+    .details-box ul li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* HEADER */
+    .logo {
+        font-size: 20px;
+        margin-left: 10px; /* Geser ke kiri agar tidak terlalu jauh */
+    }
+
+    .navbar {
+        display: none; /* Sembunyikan navbar, bisa diganti dengan menu hamburger */
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+        margin: 100px auto 30px;
+        padding: 15px;
+    }
+
+    .about-section .heading {
+        font-size: 24px; /* Perkecil ukuran heading */
+    }
+
+    .profile-section img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-section h3 {
+        font-size: 18px;
+    }
+
+    .details-section {
+        text-align: center; /* Pusatkan teks agar lebih mudah dibaca */
+    }
+
+    .details-section h3 {
+        font-size: 20px;
+    }
+
+    .details-section ul li {
+        font-size: 16px;
+    }
+
+    /* BACK BUTTON */
+    .back-button {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 5%;
+    }
+
+    .footer-text p {
+        font-size: 14px;
+    }
+
+    .footer-iconTop a {
+        padding: 0.6rem;
+    }
 }
