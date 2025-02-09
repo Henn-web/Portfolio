@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Henn</title>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">  <!-- Gunakan CSS global -->
     <link rel="stylesheet" href="about.css">  <!-- CSS khusus halaman About -->
 </head>
@@ -15,73 +16,80 @@
     <header class="header">
         <a href="index.html" class="logo">Henn.</a>
      <div class="icons">
-    <div class="back-container">
-        <i class="bx bx-arrow-back" id="back-button"></i>
-        <span class="back-text"  id="back-text"> Back</span>
-    </div>
+      <a href="index.html#about" class="back-button">
+    <i class="bx bx-arrow-back"></i> Back
+</a>
     <div class="bx bx-moon" id="darkMode-icon"></div>
-    <div class="bx bx-menu" id="menu-icon"></div>
 </div>
     </header>
 	
 <!-- About Section -->
 
     <section class="about-section">
-        <h2 class="heading">About <span>Me</span></h2>
+        <h2 class="heading" id="home">About <span>Me</span> </h2>
         
         <div class="content-wrapper">
             <div class="profile-section">
-                <img src="images/about.png" alt="Henry's Profile">
+                <img src="hen-rbg.png" alt="Henry's Profile">
                 <h3>Tan Henry Arianto</h3>
                 <p class="title">Web Developer & Cryptography Enthusiast</p>
             </div>
 
             <div class="details-section">
-                <h3>Background</h3>
-                <p>I am currently a Class 12 student at SMKS Dinamika Pembangunan 1 Jakarta, passionate about web development, cryptography, and artificial intelligence. My journey in technology began with simple website projects and has evolved into creating comprehensive web applications and studying advanced cryptographic systems.</p>
+    <div class="details-box">
+        <h3>Background</h3>
+        <p>I am currently a Class 12 student at SMKS Dinamika Pembangunan 1 Jakarta, passionate about web development, cryptography, and artificial intelligence.</p>
+    </div>
 
-                <h3>Skills & Expertise</h3>
-                <ul>
-                    <li>Frontend Development (HTML, CSS, JavaScript)</li>
-                    <li>Responsive Web Design</li>
-                    <li>Cryptography and Security</li>
-                    <li>AI Integration</li>
-                    <li>UI/UX Design</li>
-                </ul>
+    <div class="details-box">
+    <h3>Skills & Expertise</h3>
+    <ul>
+        <li><i class="fab fa-html5"></i>Frontend Development (HTML, CSS, JavaScript, Python)</li>
+        <li><i class="fas fa-mobile-alt"></i>Responsive Web Design</li>
+        <li><i class="fas fa-lock"></i>Cryptography and Security</li>
+        <li><i class="fas fa-brain"></i>AI Integration</li>
+        <li><i class="fas fa-paint-brush"></i>UI/UX Design</li>
+    </ul>
+</div>
 
-                <h3>Education & Certifications</h3>
-                <ul>
-                    <li>SMKS Dinamika Pembangunan 1 Jakarta - Current Student</li>
-                    <li>READY4SECURITY-INDONESIA TRAINING - November 2023</li>
-                    <li>TOEFL ITP Prediction Certificate</li>
-                    <li>ISSC Informatics Olympiad Participant</li>
-                    <li>Web Programming Certificate - Dicoding</li>
-                </ul>
 
-                <h3>Personal Projects</h3>
-                <p>I've worked on various projects including e-commerce platforms, portfolio websites, and interactive web applications. Each project has helped me grow and develop new skills in different areas of web development and security.</p>
+    <div class="details-box">
+        <h3>Education & Certifications</h3>
+        <ul>
+            <li>SMKS Dinamika Pembangunan 1 Jakarta - Current Student</li>
+            <li>READY4SECURITY-INDONESIA TRAINING - November 2023</li>
+            <li>TOEFL ITP Prediction Certificate</li>
+            <li>ISSC Informatics Olympiad Participant</li>
+            <li>Web Programming Certificate - Dicoding</li>
+        </ul>
+    </div>
 
-                
-            </div>
-        </div>
+    <div class="details-box">
+        <h3>Personal Projects</h3>
+        <p>I've worked on various projects including e-commerce platforms, portfolio websites, and interactive web applications.</p>
+    </div>
+</div>
+
     </section>
 
 <!-- FOOTER (Menggunakan style.css) -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Made by Henn. | All Rights Reserved.</p>
+            <p>Made by Henn. | </p>
+        </div>
+		
+		 <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
 
     <script src="script.js"></script>
 	<script>
         // Back button functionality
-        document.getElementById('back-button').addEventListener('click', function() {
-            window.history.back();
-        });
-		 document.getElementById('back-text').addEventListener('click', function() {
-            window.history.back();
-        });
+    document.getElementById("back-button").addEventListener("click", function (event) {
+        event.preventDefault(); // Mencegah perilaku default link
+        window.location.href = "index.html#about"; // Redirect ke halaman utama bagian Services
+    });
     </script>
 	<script>
 	// MODE GELAP/TERANG
